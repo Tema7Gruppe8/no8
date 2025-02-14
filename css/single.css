@@ -1,0 +1,40 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  margin: 40px;
+}
+
+.grid_1-1 {
+  border: 1px solid black;
+  img {
+    border-bottom: 1px solid black;
+  }
+}
+
+.like_button {
+  object-fit: cover;
+  width: 8%;
+  margin: 10px;
+}
+
+.cart_button {
+  background-color: black;
+
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
