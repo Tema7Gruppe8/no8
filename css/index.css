@@ -142,3 +142,157 @@ h1{
 
 
 
+
+
+/* ____________________________________________________________________________ */
+/* ____________________________________________________________________________ */
+/* ____________________________________________________________________________ */
+/* ____________________________________________________________________________ */
+/* ____________________________________________________________________________ */
+/* ____________________________________________________________________________ */
+/* MEDIA - INDEX TIL DESKTOP */
+
+
+
+@media (min-width: 800px) {
+    
+    main {
+        max-width: 100vw; /* Gør main lige så bred som viewporten */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 75px;
+        padding-left: 100px;
+    }
+
+    .bogf{
+        font-size: 48px;
+        font-weight: 300;
+        margin-top: -20px;
+        padding-left: 138px;
+    }
+
+    .image-container {
+        margin-top: 138px;
+        margin-bottom: 20px;
+    }
+
+    .dark{
+        left: 120px;
+        top: 100px;
+    }
+
+    .dark img{
+        width: 500px; /* Gør den større på desktop */
+        border: 7px solid  rgba(255, 204, 226, 1);
+    }
+
+    .light{
+        left: 470px;
+        top: -20px;
+    }
+
+    .light img{
+        width: 500px;
+    }
+
+    .dark{
+        position: relative; /* Sørger for at kunne ændre z-index */
+        transition: opacity 0.7s ease, z-index 0.7s ease, transform 0.7s ease;
+    }
+    
+    /* Hover-effekt på .dark */
+    .dark:hover {
+        z-index: 3; /* .big kommer øverst */
+        opacity: 0.8; /* Gør den lidt gennemsigtig */
+        transform: scale(1.02); /* Lille zoom-effekt */
+    }
+    
+    .hero-text {
+        width: 26%; 
+        font-size: 35px;
+        line-height: 60px;
+        padding: 15px;
+        margin-left: 140px;
+        display: flex;
+        position: relative;
+        bottom: 395px;
+        right: 600px;
+        text-align: left;
+    }
+
+    .catchphrase {
+        left: 325px;
+        top:306px;
+        z-index: 4;
+    }
+    
+    .catchphrase img {
+        width: 630px; /* Ændr dette for at justere billedets størrelse */
+    }
+
+    /* ____________category section______________ */
+
+    .category-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        gap: 30px;
+        margin: 0 auto;
+        padding: 25px;
+        margin: 20px;
+    }
+
+    .cat{
+        padding: 30px;
+        margin-top: 90px;
+        font-size: 50px;
+        letter-spacing: 16px;
+    }
+
+    .category-box {
+        display: flex;
+        justify-content: center; /* Centerer billedet horisontalt */
+        align-items: center; /* Centerer billedet vertikalt */
+        margin: 14px;
+        margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .category-box img {
+       object-fit: cover;
+       width: 110%;
+       height: auto;
+       transition: all 1s ease; /* Tilføjer en glidende overgang for filter-effekten */
+    }
+
+    .category-box a {
+        display: flex;
+        width: 100%;
+     }
+
+    
+    .category-box a:hover::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.336);
+        z-index: 1;
+    }
+    
+
+}
+
+
+
+
+
