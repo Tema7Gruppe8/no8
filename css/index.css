@@ -1,0 +1,144 @@
+
+
+main{
+    background-color: rgba(255, 254, 250, 1);
+    max-width: 600px; /* Tilpas efter behov */
+    margin: 0 auto; /* Centrerer main */
+    overflow-x: hidden; /* Forhindrer vandret scroll */
+}
+
+/*Herosektionen */
+.hero {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-text {
+    width: 60%; 
+    font-size: 17.5px;
+    line-height: 22px;
+    background-color: rgba(20, 11, 11, 0.038);
+    color: rgb(54, 26, 26);
+    padding: 10px;
+    margin-top: 160px; 
+    text-align: left;
+    font-style: italic;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+}
+
+h1{
+   padding-left: 10px;
+}
+
+.bogf{
+    position: relative;
+    top: -25px;
+    left: 32px;
+    color: rgb(54, 26, 26);
+}
+
+.image-box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.catchphrase {
+    position: absolute; /* Absolut position for at placere billedet */
+    z-index: 3; /* Sørger for at billedet ligger over de andre */
+    left: -110px;
+    top: 35px;
+    
+}
+
+.catchphrase img {
+    width: 520px; /* Ændr dette for at justere billedets størrelse */
+    height: auto; /* Bevarer billedets proportioner */
+}
+
+.dark img, .light img{
+    width: 200px;
+}
+
+.dark img{
+    border: 3px solid rgb(255, 212, 249);
+}
+
+.dark {
+    position: relative;
+    top: 80px;
+    left: -50px;
+    z-index: 1;
+}
+
+.light {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    z-index: 2;
+}
+
+/*Kategorisektionen */
+.categories {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(54, 26, 26);
+    margin: 0; 
+}
+
+.cat{
+    background-color: rgba(255, 254, 250, 1);
+    padding: 10px;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-box {
+    display: flex;
+    justify-content: center; /* Centerer billedet horisontalt */
+    align-items: center; /* Centerer billedet vertikalt */
+    margin: 14px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-box img {
+   object-fit: cover;
+   width: 110%;
+   height: auto;
+   transition: all 1s ease; /* Tilføjer en glidende overgang for filter-effekten */
+}
+
+.category-box:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.336);
+    z-index: 1;
+}
+
+
+
+
+
