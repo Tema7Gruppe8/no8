@@ -45,6 +45,15 @@ main {
   }
 }
 
+.star {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  img {
+    width: 8%;
+  }
+}
+
 .rating1,
 .rating2 {
   border-bottom: 1px solid black;
