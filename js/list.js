@@ -23,7 +23,7 @@ function show(products) {
       const soldOutLabel = product.stock === 0 ? `<p class="product_soldout">Sold Out</p>` : "";
 
       const priceDisplay = product.discountPercentage
-        ? `<p class="product_ice">
+        ? `<p class="product_price">
             <span class="original_price" style="text-decoration: line-through; color: red;">$${product.price}</span> 
             <span class="discounted_price">$${finalPrice}</span>
           </p>`
@@ -39,8 +39,8 @@ function show(products) {
           <a href=""><img src="${product.thumbnail}" alt="" /></a>
           <h3 class="product_name">${product.title}</h3>
           <p class="product_brand">${product.brand}</p>
-            <p class="product_tags">${product.tags.join(", ")}</p>
-          <p class="product_price">${product.price}</p>
+          <p class="product_tags">${product.tags.join(", ")}</p>
+          <br>
           ${priceDisplay}
         </article>`;
     })
