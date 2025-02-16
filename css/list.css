@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  place-items: center;
+}
+
+article {
+  border: 1px solid black;
+}
+
+article .product_discount {
+  margin-top: 5px;
+  padding: 1px 20px 1px 15px;
+}
+
+.product_discount {
+  position: absolute;
+  background-color: #422726;
+  color: #fffefa;
+  cursor: default;
+}
+
+label {
+  display: grid;
+  border: 1px solid black;
+  place-self: end;
+  margin: 5px;
+}
+
+.heart-container {
+  background-image: url(/ui_elementer/like.svg);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .heart-container {
+  background-image: url(/ui_elementer/logo.svg);
+}
