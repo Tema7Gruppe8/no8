@@ -18,12 +18,12 @@ main{
 
 .hero-text {
     width: 60%; 
-    font-size: 17.5px;
+    font-size: 18px;
     line-height: 22px;
     background-color: rgba(20, 11, 11, 0.038);
     color: rgb(54, 26, 26);
     padding: 10px;
-    margin-top: 160px; 
+    margin-top: 180px; 
     text-align: left;
     font-style: italic;
 }
@@ -57,13 +57,12 @@ h1{
 .catchphrase {
     position: absolute; /* Absolut position for at placere billedet */
     z-index: 3; /* Sørger for at billedet ligger over de andre */
-    left: -110px;
-    top: 35px;
-    
+    left: -30px;
+    top: 160px;
 }
 
 .catchphrase img {
-    width: 520px; /* Ændr dette for at justere billedets størrelse */
+    width: 340px; /* Ændr dette for at justere billedets størrelse */
     height: auto; /* Bevarer billedets proportioner */
 }
 
@@ -102,7 +101,7 @@ h1{
     padding: 10px;
 }
 
-.category-container {
+.category_container {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 5px;
@@ -138,6 +137,10 @@ h1{
     z-index: 1;
 }
 
+.hero-box{
+    display: none;
+}
+
 
 
 
@@ -166,25 +169,30 @@ h1{
         width: 100%;
     }
 
+    .hero{
+        margin-bottom: -300px;
+    }
+
     h1{
-        font-size: 75px;
+        font-size: 70px;
         padding-left: 100px;
     }
 
     .bogf{
-        font-size: 48px;
+        font-size: 42px;
         font-weight: 300;
+        font-style: italic;
         margin-top: -20px;
         padding-left: 138px;
     }
 
     .image-container {
         margin-top: 138px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .dark{
-        left: 120px;
+        left: 160px;
         top: 100px;
     }
 
@@ -194,7 +202,7 @@ h1{
     }
 
     .light{
-        left: 470px;
+        left: 510px;
         top: -20px;
     }
 
@@ -216,30 +224,43 @@ h1{
     
     .hero-text {
         width: 26%; 
-        font-size: 35px;
-        line-height: 60px;
-        padding: 15px;
-        margin-left: 140px;
+        font-size: 27px;
+        line-height: 55px;
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 40px;
+        margin-left: 170px;
         display: flex;
         position: relative;
-        bottom: 395px;
+        bottom: 345px;
         right: 600px;
         text-align: left;
     }
 
+    .hero-box{
+        width: 12%;
+        padding: 155px;
+        display: flex;
+        position: relative;
+        bottom: 620px;
+        right: 545px;
+        background-color: rgba(54, 26, 26, 0.096);
+        
+    }
+
     .catchphrase {
-        left: 325px;
-        top:306px;
+        left: 365px;
+        top:320px;
         z-index: 4;
     }
     
     .catchphrase img {
-        width: 630px; /* Ændr dette for at justere billedets størrelse */
+        width: 590px; /* Ændr dette for at justere billedets størrelse */
     }
 
     /* ____________category section______________ */
 
-    .category-container {
+    .category_container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         gap: 30px;
@@ -249,10 +270,11 @@ h1{
     }
 
     .cat{
-        padding: 30px;
+        padding: 20px;
         margin-top: 90px;
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 16px;
+        font-weight: 100;
     }
 
     .category-box {
