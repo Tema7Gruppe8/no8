@@ -24,6 +24,9 @@ main {
 
 .indhold {
   padding: 10px;
+}
+
+.produkt_info {
   p,
   h3,
   h2 {
@@ -73,7 +76,7 @@ main {
   right: 3%;
   object-fit: cover;
   width: 12%;
-  top: 52%;
+  top: 43%;
   background-color: rgba(0, 0, 0, 0.5);
   img {
     border-bottom: none;
@@ -98,6 +101,37 @@ main {
   a {
     text-decoration: none;
     color: white;
+  }
+}
+
+/* accordion */
+.accordion {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.accordion-header {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: rgb(214, 212, 212);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  p {
+    padding: 5px;
   }
 }
 
