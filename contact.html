@@ -8,38 +8,65 @@
     <title>Contact page</title>
   </head>
   <body>
-    <!-- CONTACT SECTION -->
     <main>
       <section class="contact">
-        <h2 class="contact-title">Contact</h2>
-        <p class="contact-description">Write an email to get in touch with us. We will respond as soon as we can.</p>
+        <h2 class="contact-title">Contact us</h2>
 
-        <!-- Kontaktkort -->
         <div class="contact-cards">
+          <!-- Email Card -->
           <div class="contact-card">
-            <img src="email.jpg" alt="Email" />
-            <h3>Email</h3>
+            <img src="images/email.jpg" alt="Email" />
+            <div class="title-overlay">
+              <h3>Email</h3>
+            </div>
+            <div class="info-overlay">
+              <p>mail@mailmailmail.dk</p>
+              <p>Response: 2-3 weekdays</p>
+            </div>
           </div>
+
+          <!-- Phone Card -->
           <div class="contact-card">
-            <img src="phone.jpg" alt="Phone" />
-            <h3>Phone</h3>
+            <img src="images/phone.jpg" alt="Phone" />
+            <div class="title-overlay">
+              <h3>Phone</h3>
+            </div>
+            <div class="info-overlay">
+              <p>+45 12 34 56 78</p>
+              <p>Mon-Fri: 9am - 6pm</p>
+            </div>
           </div>
+
+          <!-- Opening Hours Card -->
           <div class="contact-card">
-            <img src="hours.jpg" alt="Opening Hours" />
-            <h3>Opening Hours</h3>
+            <img src="images/opening_hours.jpg" alt="Opening Hours" />
+            <div class="title-overlay">
+              <h3>Opening Hours</h3>
+            </div>
+            <div class="info-overlay">
+              <p>Mon-Fri: 9am - 6pm</p>
+              <p>Sat-Sun: Closed</p>
+            </div>
           </div>
+
+          <!-- Return Policy Card -->
           <div class="contact-card">
-            <img src="return.jpg" alt="Return Policy" />
-            <h3>Return Policy</h3>
+            <img src="images/return_policy.jpg" alt="Return Policy" />
+            <div class="title-overlay">
+              <h3>Return Policy</h3>
+            </div>
+            <div class="info-overlay">
+              <p>14-day return guarantee</p>
+              <p>See our full policy here</p>
+            </div>
           </div>
         </div>
       </section>
-
       <!-- NEWSLETTER SECTION -->
       <section class="newsletter">
-        <h3>Newsletter</h3>
-        <p>Join Our Beauty Community</p>
-        <p>Be the first to know about new arrivals, exclusive discounts, and beauty trends.</p>
+        <div class="newsletter-label">Newsletter</div>
+        <h2>Join Our Beauty Community</h2>
+        <p class="newsletter-desc">Be the first to know about new arrivals, exclusive discounts, and beauty trends.</p>
         <form>
           <input type="email" placeholder="Your e-mail address" required />
           <button type="submit">Sign up</button>
