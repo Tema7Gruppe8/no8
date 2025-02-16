@@ -38,7 +38,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="mascara" />
           </div>
           <div class="indhold">
-            <a href="" class="like_button"><img src="./assets/like_stroke.svg" /></a>
+            <a href="" class="like_button"></a>
             <div class="produkt_info">
               <h2>${data.title}</h2>
               <h3>${data.brand}</h3>
