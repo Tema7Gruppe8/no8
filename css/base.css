@@ -170,13 +170,13 @@ p {
       <nav>
         <ul class="menu">
           <li class="button1">
-            <a href="index.html">Makeup</a>
+            <a href="list.html?category=beauty">Makeup</a>
           </li>
           <li class="button">
-            <a href="index.html">Fragances</a>
+            <a href="list.html?category=fragrances">Fragances</a>
           </li>
           <li class="button3">
-            <a href="index.html">Contact</a>
+            <a href="contact.html">Contact</a>
           </li>
         </ul>
         <div class="bottom_line"></div>
