@@ -51,6 +51,10 @@ main {
   }
 }
 
+.skjul {
+  display: none;
+}
+
 .star {
   display: flex;
   flex: row;

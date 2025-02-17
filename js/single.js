@@ -1,4 +1,3 @@
-
 // Fetch data
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -15,10 +14,10 @@ fetch(`https://dummyjson.com/products/${productId}`)
 
     <div class="grid_1-1">
           <div>
-            <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="mascara" />
+            <img src="${data.images[0]}" alt="mascara" />
           </div>
           <div class="indhold">
-          <div class="deal">
+          <div class="deal ${!data.discount && "skjul"}">
           <p>DEAL</p>
           </div>
             <div class="like_button"></div>
@@ -27,8 +26,8 @@ fetch(`https://dummyjson.com/products/${productId}`)
               <h3>${data.brand}</h3>
               <p>${data.description}</p>
               <div class="price">
-                <p><strong>EUR${data.price},-</strong></p>
-                <p class="sale_price"><strong>EUR 9.99,-</strong></p>
+                <p><strong>EUR ${data.price},-</strong></p>
+                <p class="sale_price ${data.discountPercentage && "vis"}"><strong>EUR ${Math.floor(data.price * (1 - data.discountPercentage / 100))},-</strong></p>
               </div>
             </div>
             <div class="cart_button">
