@@ -1,7 +1,7 @@
 
 
 main{
-    background-color: rgba(255, 254, 250, 1);
+    background-color:var(--egg);
     max-width: 600px; /* Tilpas efter behov */
     margin: 0 auto; /* Centrerer main */
     overflow-x: hidden; /* Forhindrer vandret scroll */
@@ -21,7 +21,7 @@ main{
     font-size: 18px;
     line-height: 22px;
     background-color: rgba(20, 11, 11, 0.038);
-    color: rgb(54, 26, 26);
+    color: var(--brown);
     padding: 10px;
     margin-top: 180px; 
     text-align: left;
@@ -41,7 +41,7 @@ h1{
     position: relative;
     top: -25px;
     left: 32px;
-    color: rgb(54, 26, 26);
+    color: var(--brown);
 }
 
 .image-box {
@@ -71,7 +71,7 @@ h1{
 }
 
 .dark img{
-    border: 3px solid rgb(255, 212, 249);
+    border: 3px solid var(--pink);
 }
 
 .dark {
@@ -92,12 +92,12 @@ h1{
 .categories {
     text-align: center;
     padding: 15px 0;
-    background-color: rgb(54, 26, 26);
+    background-color: var(--brown);
     margin: 0; 
 }
 
 .cat{
-    background-color: rgba(255, 254, 250, 1);
+    background-color: var(--egg);
     padding: 10px;
 }
 
@@ -198,7 +198,7 @@ h1{
 
     .dark img{
         width: 500px; /* Gør den større på desktop */
-        border: 7px solid  rgba(255, 204, 226, 1);
+        border: 7px solid var(--pink);
     }
 
     .light{
