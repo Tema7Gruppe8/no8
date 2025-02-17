@@ -158,3 +158,219 @@ p {
   font-size: 14px;
   color: #5b4035;
 }
+
+/* MENU */
+
+/* Komme denne html ind før jeres main */
+
+/* <header>
+      <div class="logo">
+        <a href="index.html"><img src="./assets/logo.svg" alt="logo" /> </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="button1">
+            <a href="index.html">Makeup</a>
+          </li>
+          <li class="button">
+            <a href="index.html">Fragances</a>
+          </li>
+          <li class="button3">
+            <a href="index.html">Contact</a>
+          </li>
+        </ul>
+        <div class="bottom_line"></div>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header> */
+
+/* Og denne script mellem jeres main og body */
+/* <script src="./js/base.js"></script> */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffefa;
+}
+
+/* Menu */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* border-bottom: 1px solid black; */
+}
+
+.menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  list-style: none;
+  height: 90px;
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: Fragment Mono;
+    font-size: 1.3rem;
+    margin: 25px;
+
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+.logo {
+  margin-left: 7%;
+  margin-top: 15px;
+}
+
+.button1 {
+  /* display: grid;
+  place-items: center; */
+  padding-top: 18px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.button {
+  /* display: grid;
+  place-items: center; */
+  padding-top: 18px;
+  border-right: 1px solid black;
+}
+
+.button3 {
+  /* display: grid;
+  place-items: center; */
+  padding-top: 18px;
+}
+
+.button a:hover {
+  border-bottom: 1px solid black;
+}
+
+.button1 a:hover {
+  border-bottom: 1px solid black;
+}
+
+.button3 a:hover {
+  border-bottom: 1px solid black;
+}
+
+.bottom_line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Burgermenu */
+.burger {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.burger .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .bottom_line {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button1 {
+    border-left: none;
+    border-right: none;
+  }
+  .button {
+    border-right: none;
+  }
+  .button3 {
+    border-right: none;
+  }
+
+  .logo {
+    margin-right: 20px;
+    img {
+      width: 70%;
+      border-bottom: 1px solid black;
+      padding-bottom: 15px;
+    }
+  }
+
+  .menu {
+    display: none;
+    a {
+      padding-right: none;
+      padding-left: none;
+      text-align: left;
+    }
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+    /* Stregen bliver usynlig, når der bliver trykket, da den danner et kryds, kun med line 1 og 2 */
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    height: Auto;
+    z-index: 4;
+    border: 1px solid black;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
