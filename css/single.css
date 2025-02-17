@@ -72,17 +72,22 @@ main {
 }
 
 .like_button {
+  background-image: url(../assets/like_stroke.svg);
+  padding: 5px;
   position: absolute;
   right: 3%;
   object-fit: cover;
-  width: 12%;
+  width: 50px;
+  height: 44px;
   top: 43%;
+  background-size: contain;
   background-color: rgba(0, 0, 0, 0.5);
-  img {
-    border-bottom: none;
-    border: 1px solid rgb(66, 39, 38);
-    padding: 5px;
-  }
+  background-repeat: no-repeat;
+  border: 1px solid rgb(66, 39, 38);
+}
+
+.like_button:hover {
+  background-image: url("../assets/like_brown.svg"); /* Skifter til en anden SVG ved hover */
 }
 
 .price {
