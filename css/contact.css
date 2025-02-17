@@ -1,0 +1,176 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+body {
+  background-color: #fffefa;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ✅ CONTACT SECTION */
+.contact {
+  padding: 20px;
+}
+.contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #422726;
+  color: white;
+  padding: 25px 70px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 40px;
+  letter-spacing: 15px; /* Mindre spacing for bedre læsbarhed */
+  border-radius: 8px;
+}
+
+/* ✅ CONTACT CARDS (MOBILE-FIRST) */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.contact-card img {
+  width: 100%;
+  display: block;
+}
+
+/* 🔹 H3 TITEL OVENPÅ KORTET */
+.title-overlay {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  background: rgba(255, 243, 248, 0.95);
+  text-align: center;
+  padding: 15px 10px;
+}
+.title-overlay h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 🔹 INFO TEKST (ALTID SYNLIG PÅ MOBIL) */
+.info-overlay {
+  opacity: 1;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+.info-overlay p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ✅ NEWSLETTER */
+/* ✅ NEWSLETTER */
+.newsletter {
+  background-color: #d2d2d2;
+  padding: 50px;
+  margin-top: 150px; /* Mere afstand fra contact cards */
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left; /* Juster teksten til venstre */
+}
+
+/* 🔹 Newsletter label i venstre hjørne */
+.newsletter-label {
+  background-color: #422726;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 🔹 Nyt hovedtitel (Join Our Beauty Community) */
+.newsletter h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #422726;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* 🔹 Undertekst */
+.newsletter p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Form input */
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+}
+.newsletter button {
+  background-color: #422726;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+.newsletter button:hover {
+  background-color: #5b4035;
+}
+
+/* 🔹 DESKTOP-STYLING (1024px+) */
+@media (min-width: 1024px) {
+  .contact-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Hover-effekt for info-overlay */
+  .info-overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .contact-card:hover .info-overlay {
+    opacity: 1;
+  }
+
+  /* Hover-effekt for contact-card */
+  .contact-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  .contact-card:hover {
+    transform: scale(1.05);
+  }
+}
