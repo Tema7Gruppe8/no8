@@ -62,6 +62,12 @@ fetch(`https://dummyjson.com/products/${productId}`)
           <h3>Review</h3>
         </div>
         <div class="grid_1-1-1">
+
+
+        ${data.reviews
+          .map((data) => {
+            console.log("data er: ", data);
+            return `
           <div class="rating1">
             <div class="star">
               <img src="./assets/star.svg" alt="star" />
@@ -73,31 +79,10 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <p><strong>${data.reviewerName}</strong></p>
             <em>${data.comment}</em>
             <p><strong>${data.date}</strong></p>
-          </div>
-          <div class="rating2">
-            <div class="star">
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-            </div>
-            <p><strong>${data.reviewerName}</strong></p>
-            <em>${data.comment}</em>
-            <p><strong>${data.date}</strong></p>
-          </div>
-          <div class="rating3">
-            <div class="star">
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-            </div>
-            <p><strong>${data.reviewerName}</strong></p>
-            <em>${data.comment}</em>
-            <p><strong>${data.date}</strong></p>
-          </div>
+          </div>`;
+          })
+          .join("")}
+          
         </div>
       `;
   });
@@ -122,3 +107,30 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     }
   });
 });
+
+{
+  /* <div class="rating2">
+            <div class="star">
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+            </div>
+            <p><strong>${data.reviewerName}</strong></p>
+            <em>${data.comment}</em>
+            <p><strong>${data.date}</strong></p>
+          </div>
+          <div class="rating3">
+            <div class="star">
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+            </div>
+            <p><strong>${data.reviewerName}</strong></p>
+            <em>${data.comment}</em>
+            <p><strong>${data.date}</strong></p>
+          </div> */
+}
