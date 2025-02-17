@@ -1,24 +1,3 @@
-// accordion
-document.querySelectorAll(".accordion-header").forEach((button) => {
-  button.addEventListener("click", function () {
-    let content = this.nextElementSibling;
-
-    // Luk andre åbne sektioner
-    document.querySelectorAll(".accordion-content").forEach((item) => {
-      if (item !== content) {
-        item.style.maxHeight = null;
-      }
-    });
-
-    // Toggle sektionen
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-});
-
 // Fetch data
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -119,3 +98,24 @@ fetch(`https://dummyjson.com/products/${productId}`)
         </div>
       `;
   });
+
+// accordion
+document.querySelectorAll(".accordion-header").forEach((button) => {
+  button.addEventListener("click", function () {
+    let content = this.nextElementSibling;
+
+    // Luk andre åbne sektioner
+    document.querySelectorAll(".accordion-content").forEach((item) => {
+      if (item !== content) {
+        item.style.maxHeight = null;
+      }
+    });
+
+    // Toggle sektionen
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
