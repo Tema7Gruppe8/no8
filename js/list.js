@@ -1,16 +1,16 @@
+const urlParams = new URLSearchParams(window.location.search);
+const productCategory = urlParams.get("category");
+
 const productList = document.querySelector("main");
 let url = `https://dummyjson.com/products?limit=0`;
-let selectedCategories = ["beauty", "fragrances", "skin-care"];
+if (productCategory) {
+  url = `https://dummyjson.com/products?category=${productCategory}`;
+}
 
 function hentData() {
   fetch(url)
     .then((response) => response.json())
-    .then((data) => {
-      // Filter products by checking if their category is in the selectedCategories array
-      const filteredProducts = data.products.filter((product) => selectedCategories.includes(product.category));
-      show(filteredProducts);
-    })
-    .catch((error) => console.error("Error fetching data:", error));
+    .then((data) => show(data.products));
 }
 
 function show(products) {
@@ -36,7 +36,7 @@ function show(products) {
           <input type="checkbox" id="fav-toggle">
           <span class="heart-container"></span>
           </label>
-          <a href=""><img src="${product.thumbnail}" alt="" /></a>
+          <a href="single.html?id=${product.id}"><img src="${product.thumbnail}" alt="" /></a>
           <h3 class="product_name">${product.title}</h3>
           <p class="product_brand">${product.brand}</p>
           <p class="product_tags">${product.tags.join(", ")}</p>

@@ -19,6 +19,8 @@ main {
 
 article {
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: subgrid;
 }
 
 article .product_discount {
@@ -52,7 +54,7 @@ label {
 }
 
 .heart-container {
-  background-image: url(/ui_elementer/like.svg);
+  background-image: url(/assets/like.svg);
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -64,6 +66,6 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + .heart-container {
-  background-image: url(/ui_elementer/like.svg);
+  background-image: url(/assets/like.svg);
   background-color: #2f2f2f;
 }
