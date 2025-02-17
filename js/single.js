@@ -1,3 +1,4 @@
+
 // Fetch data
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -17,6 +18,9 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="mascara" />
           </div>
           <div class="indhold">
+          <div class="deal">
+          <p>DEAL</p>
+          </div>
             <div class="like_button"></div>
             <div class="produkt_info">
               <h2>${data.title}</h2>

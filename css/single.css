@@ -17,6 +17,7 @@ main {
 .grid_1-1 {
   position: relative;
   border: 1px solid black;
+  background: white;
   img {
     border-bottom: 1px solid black;
   }
@@ -35,11 +36,13 @@ main {
 }
 
 .grid_1-1-1 {
+  background: white;
   text-align: center;
   border: 1px solid black;
 }
 
 .review {
+  background: white;
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -73,13 +76,13 @@ main {
 
 .like_button {
   background-image: url(../assets/like_stroke.svg);
-  padding: 5px;
   position: absolute;
   right: 3%;
   object-fit: cover;
   width: 50px;
-  height: 44px;
-  top: 43%;
+  height: 40px;
+  top: 48%;
+  cursor: pointer;
   background-size: contain;
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
@@ -88,6 +91,16 @@ main {
 
 .like_button:hover {
   background-image: url("../assets/like_brown.svg"); /* Skifter til en anden SVG ved hover */
+}
+
+.deal {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  background: rgb(66, 39, 38);
+  display: inline-block;
+  color: white;
+  padding: 10px;
 }
 
 .price {
@@ -135,14 +148,18 @@ main {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  p {
-    padding: 5px;
-  }
+}
+
+.accordion-content p {
+  padding: 5px;
 }
 
 /* desktop version */
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
+  main {
+    margin: 80px;
+  }
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
