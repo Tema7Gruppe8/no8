@@ -1,20 +1,18 @@
-// accordion
 document.querySelectorAll(".accordion-header").forEach((button) => {
   button.addEventListener("click", function () {
     let content = this.nextElementSibling;
+    let isOpen = getComputedStyle(content).maxHeight !== "0px"; // Tjek om den er åben
 
-    // Luk andre åbne sektioner
+    // Luk alle andre åbne sektioner
     document.querySelectorAll(".accordion-content").forEach((item) => {
-      if (item !== content) {
-        item.style.maxHeight = null;
-      }
+      item.style.maxHeight = "0px";
     });
 
-    // Toggle sektionen
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
+    // Åbn eller luk den valgte sektion
+    if (isOpen) {
+      content.style.maxHeight = "0px"; // Luk den
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = content.scrollHeight + "px"; // Åbn den
     }
   });
 });
@@ -38,6 +36,9 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="mascara" />
           </div>
           <div class="indhold">
+          <div class="deal">
+          <p>DEAL</p>
+          </div>
             <div class="like_button"></div>
             <div class="produkt_info">
               <h2>${data.title}</h2>
