@@ -1,21 +1,3 @@
-document.querySelectorAll(".accordion-header").forEach((button) => {
-  button.addEventListener("click", function () {
-    let content = this.nextElementSibling;
-    let isOpen = getComputedStyle(content).maxHeight !== "0px"; // Tjek om den er åben
-
-    // Luk alle andre åbne sektioner
-    document.querySelectorAll(".accordion-content").forEach((item) => {
-      item.style.maxHeight = "0px";
-    });
-
-    // Åbn eller luk den valgte sektion
-    if (isOpen) {
-      content.style.maxHeight = "0px"; // Luk den
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px"; // Åbn den
-    }
-  });
-});
 
 // Fetch data
 
@@ -120,3 +102,24 @@ fetch(`https://dummyjson.com/products/${productId}`)
         </div>
       `;
   });
+
+// accordion
+document.querySelectorAll(".accordion-header").forEach((button) => {
+  button.addEventListener("click", function () {
+    let content = this.nextElementSibling;
+
+    // Luk andre åbne sektioner
+    document.querySelectorAll(".accordion-content").forEach((item) => {
+      if (item !== content) {
+        item.style.maxHeight = null;
+      }
+    });
+
+    // Toggle sektionen
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
