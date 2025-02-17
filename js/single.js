@@ -1,65 +1,106 @@
 // Fetch data
 
 const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get("id");
+let productId = urlParams.get("id");
 
-let url = `https://dummyjson.com/products/${productId}`;
+let produkt = document.querySelector(".produkt");
 
-const produkt = document.querySelector(".produkt");
-
-fetch(url)
+fetch(`https://dummyjson.com/products/${productId}`)
+  // linker til json fil - Med data for produkterne.
   .then((response) => response.json())
   .then((data) => {
-    // Check if there are reviews
-    let reviewsHTML = "";
-    if (data.reviews && data.reviews.length > 0) {
-      reviewsHTML = data.reviews
-        .map(
-          (review) => `
-        <div class="rating">
-          <div class="star">
-            <img src="./assets/star.svg" alt="star" />
-            <img src="./assets/star.svg" alt="star" />
-            <img src="./assets/star.svg" alt="star" />
-            <img src="./assets/star.svg" alt="star" />
-            <img src="./assets/star.svg" alt="star" />
-          </div>
-          <p><strong>${review.reviewerName}</strong></p>
-          <em>${review.comment}</em>
-          <p><strong>${review.date}</strong></p>
-        </div>
-      `
-        )
-        .join(""); // Join the mapped reviews into a single HTML string
-    } else {
-      reviewsHTML = `<p>No reviews available.</p>`;
-    }
-
+    // Tager svaret og gør det til gyldig data.
     produkt.innerHTML = `
-      <div class="grid_1-1">
-        <div>
-          <img src="${data.images[0]}" alt="Product image" />
-        </div>
-        <div class="indhold">
-          <div class="deal"><p>DEAL</p></div>
-          <div class="like_button"></div>
-          <div class="produkt_info">
-            <h2>${data.title}</h2>
-            <h3>${data.brand}</h3>
-            <p>${data.description}</p>
-            <div class="price">
-              <p><strong>EUR ${data.price},-</strong></p>
-              <p class="sale_price"><strong>EUR 9.99,-</strong></p>
+
+    <div class="grid_1-1">
+          <div>
+            <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="mascara" />
+          </div>
+          <div class="indhold">
+          <div class="deal">
+          <p>DEAL</p>
+          </div>
+            <div class="like_button"></div>
+            <div class="produkt_info">
+              <h2>${data.title}</h2>
+              <h3>${data.brand}</h3>
+              <p>${data.description}</p>
+              <div class="price">
+                <p><strong>EUR${data.price},-</strong></p>
+                <p class="sale_price"><strong>EUR 9.99,-</strong></p>
+              </div>
+            </div>
+            <div class="cart_button">
+              <a href="">Add to cart</a>
+            </div>
+            <div class="accordion">
+              <button class="accordion-header">Details</button>
+
+              <div class="accordion-content">
+                <p>Brand:${data.brand}</p>
+                <p>Sku: ${data.sku}</p>
+                <p>Weight: ${data.weight}</p>
+                <p>Dimensions: width: ${data.width}, height: ${data.height}, depth: ${data.depth}</p>
+              </div>
+
+              <button class="accordion-header">Stock</button>
+              <div class="accordion-content">
+                <p>${data.availabilityStatus}:</p>
+                <p>${data.stock}</p>
+              </div>
+
+              <button class="accordion-header">Shipping & Returns</button>
+              <div class="accordion-content">
+                <p>Shipping: ${data.shippingInformation}</p>
+                <p>Return:${data.returnPolicy} </p>
+                <p>Warranty: ${data.warrantyInformation}</p>
+              </div>
             </div>
           </div>
-          <div class="cart_button"><a href="">Add to cart</a></div>
         </div>
-      </div>
-      <div class="review"><h3>Reviews</h3></div>
-      <div class="grid_1-1-1">${reviewsHTML}</div>
-    `;
-  })
-  .catch((error) => console.error("Error fetching data:", error));
+        <div class="review">
+          <h3>Review</h3>
+        </div>
+        <div class="grid_1-1-1">
+          <div class="rating1">
+            <div class="star">
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+            </div>
+            <p><strong>${data.reviewerName}</strong></p>
+            <em>${data.comment}</em>
+            <p><strong>${data.date}</strong></p>
+          </div>
+          <div class="rating2">
+            <div class="star">
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+            </div>
+            <p><strong>${data.reviewerName}</strong></p>
+            <em>${data.comment}</em>
+            <p><strong>${data.date}</strong></p>
+          </div>
+          <div class="rating3">
+            <div class="star">
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+              <img src="./assets/star.svg" alt="star" />
+            </div>
+            <p><strong>${data.reviewerName}</strong></p>
+            <em>${data.comment}</em>
+            <p><strong>${data.date}</strong></p>
+          </div>
+        </div>
+      `;
+  });
 
 // accordion
 document.querySelectorAll(".accordion-header").forEach((button) => {
