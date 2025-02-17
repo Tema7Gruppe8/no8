@@ -42,7 +42,7 @@ main {
 }
 
 .review {
-  background: white;
+  background: var(--pink);
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
