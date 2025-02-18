@@ -206,7 +206,7 @@ h1{
     }
 
     .dark{
-        left: 130px;
+        left: 120px;
         top: -20px;
     }
 
@@ -216,8 +216,8 @@ h1{
     }
 
     .light{
-        left: 350px;
-        top: -110px;
+        left: 355px;
+        top: -109px;
     }
 
     .light img{
@@ -238,11 +238,11 @@ h1{
     
     .hero-text {
         width: 30%; 
-        font-size: 20px;
+        font-size: 19.5px;
         line-height: 35px;
         padding: 25px;
-        padding-left: 30px;
-        padding-right: 40px;
+        padding-left: 20px;
+        padding-right: 59px;
         margin-left: 170px;
         display: flex;
         position: relative;
@@ -252,18 +252,18 @@ h1{
     }
 
     .hero-box{
-        width: 29%;
+        width: 28.5%;
         padding: 100px;
         display: flex;
         position: relative;
-        bottom: 585px;
+        bottom: 580px;
         right: 385px;
-        background-color: rgba(54, 26, 26, 0.053);
+        background-color: rgba(54, 26, 26, 0.088);
         
     }
 
     .catchphrase {
-        left: 290px;
+        left: 303px;
         top:78px;
         z-index: 4;
     }
@@ -285,7 +285,7 @@ h1{
 
     .cat{
         padding: 14px;
-        margin-top: 50px;
+        margin-top: 46.5px;
         font-size: 24px;
         letter-spacing: 16px;
         font-weight: 100;
