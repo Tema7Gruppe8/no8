@@ -86,20 +86,54 @@ Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelv
 
 - Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
 
-  - Vi har lavet funktion, såsom getData(), som fetcher API fra dummyJSON. fx showProducts() som viser indholdet i et innerHTML.
+  - Funktionen tager udgangspunkt i APIen, som er fetched, og bruger dataen af produkterne, så de forskellige data vises, hvor man ønsker dem.
 
 - Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
 
-  -
+  -Der forventes, at de rigtige værdier (såsom pris og discount) bliver beregnet. Der forventes også, at når man klikker på et bestemt produkt, så bliver man henvist til product.html med det rigtige id.
 
 - Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
+
+  - Der bruges et if statement, som går igennem parametrerne, ser om der er produkter, der kan indlæses. Hvis ikke, så viser den en paragraf, der siger "No products found in this category". Hvis der er produkter, så returner funktionen en map funktion, som laver vores produkt kort med værdier fra APIen. Herunder bliver der lavet nogle consts, som fx beregner discount pris, beregner betinget visninger osv, og returnerer dem i article.
+
 - Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
 
 ```javascript
-//funktionens kode:
-function voresFunktion(sprog) {
-  console.log(`${sprog} syntax highlighting`);
+function show(products) {
+  if (!products || products.length === 0) {
+    productList.innerHTML = "<p>No products found in this category.</p>";
+    return;
+  }
+
+  const markup = products
+    .map((product) => {
+      const finalPrice = (product.price * (1 - product.discountPercentage / 100)).toFixed(2);
+      const discountLabel = product.discountPercentage ? `<p class="product_discount">Deal</p>` : "";
+      const soldOutLabel = product.stock === 0 ? `<p class="product_soldout">Sold Out</p>` : "";
+      const priceDisplay = product.discountPercentage
+        ? `<p class="product_price">
+            <span class="original_price">$${product.price}</span> 
+            <span class="discounted_price">$${finalPrice}</span>
+          </p>`
+        : `<p class="product_price">$${product.price}</p>`;
+
+      return `
+      <article>
+          ${discountLabel}
+          ${soldOutLabel}
+          <label>
+          <input type="checkbox" id="fav-toggle">
+          <span class="heart-container"></span>
+          </label>
+          <a href="single.html?id=${product.id}"><img src="${product.thumbnail}" alt="${product.title}" /></a>
+          <h3 class="product_name">${product.title}</h3>
+          <p class="product_brand">${product.brand}</p>
+          <br>
+          ${priceDisplay}
+        </article>`;
+    })
+    .join("");
+
+  productList.innerHTML = markup;
 }
-//hvordan funktionen kaldes:
-voresFunktion("JavaScript");
 ```

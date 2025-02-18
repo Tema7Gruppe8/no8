@@ -32,8 +32,8 @@ function show(products) {
       const soldOutLabel = product.stock === 0 ? `<p class="product_soldout">Sold Out</p>` : "";
       const priceDisplay = product.discountPercentage
         ? `<p class="product_price">
-            <span class="original_price">$${product.price}</span> 
-            <span class="discounted_price">$${finalPrice}</span>
+            <span class="original_price">${product.price} EUR,-</span> 
+            <span class="discounted_price">$${finalPrice} EUR,-</span>
           </p>`
         : `<p class="product_price">$${product.price}</p>`;
 
