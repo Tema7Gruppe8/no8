@@ -42,6 +42,7 @@ h1{
     font-family: "Old Standard TT", serif;
     font-weight: 600;
     font-size: 40px;
+    color: var(--black);
 }
 
 .bogf{
