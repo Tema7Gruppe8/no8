@@ -41,7 +41,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
           <p>Brand:${data.brand}</p>
           <p>Sku: ${data.sku}</p>
           <p>Weight: ${data.weight}</p>
-          <p>Dimensions: width: ${data.width}, height: ${data.height}, depth: ${data.depth}</p>
+          
         </div>
       </details>
 
