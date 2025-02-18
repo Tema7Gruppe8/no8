@@ -181,7 +181,7 @@ h1{
     }
 
     .hero{
-        margin-bottom: -460px;
+        margin-bottom: -430px;
     }
 
     h1{
@@ -194,7 +194,7 @@ h1{
     }
 
     .bogf{
-        font-size: 25px;
+        font-size: 24px;
         font-weight: 300;
         font-style: italic;
         margin-top: -2px;
@@ -206,22 +206,22 @@ h1{
     }
 
     .dark{
-        left: 90px;
-        top: 10px;
+        left: 130px;
+        top: -20px;
     }
 
     .dark img{
-        width: 300px; /* Gør den større på desktop */
-        border: 7px solid var(--pink);
+        width: 290px; /* Gør den større på desktop */
+        border: 5px solid var(--pink);
     }
 
     .light{
         left: 350px;
-        top: -30px;
+        top: -110px;
     }
 
     .light img{
-        width: 320px;
+        width: 300px;
     }
 
     .dark{
@@ -237,39 +237,39 @@ h1{
     }
     
     .hero-text {
-        width: 26%; 
-        font-size: 27px;
-        line-height: 55px;
-        padding: 20px;
-        padding-left: 25px;
+        width: 30%; 
+        font-size: 20px;
+        line-height: 35px;
+        padding: 25px;
+        padding-left: 30px;
         padding-right: 40px;
         margin-left: 170px;
         display: flex;
         position: relative;
-        bottom: 345px;
-        right: 600px;
+        bottom: 410px;
+        right: 450px;
         text-align: left;
     }
 
     .hero-box{
-        width: 26%;
-        padding: 140px;
+        width: 29%;
+        padding: 100px;
         display: flex;
         position: relative;
         bottom: 585px;
-        right: 545px;
-        background-color: rgba(54, 26, 26, 0.077);
+        right: 385px;
+        background-color: rgba(54, 26, 26, 0.053);
         
     }
 
     .catchphrase {
-        left: 365px;
-        top:220px;
+        left: 290px;
+        top:78px;
         z-index: 4;
     }
     
     .catchphrase img {
-        width: 590px; /* Ændr dette for at justere billedets størrelse */
+        width: 400px; /* Ændr dette for at justere billedets størrelse */
     }
 
     /* ____________category section______________ */
@@ -284,9 +284,9 @@ h1{
     }
 
     .cat{
-        padding: 20px;
-        margin-top: 90px;
-        font-size: 40px;
+        padding: 14px;
+        margin-top: 50px;
+        font-size: 24px;
         letter-spacing: 16px;
         font-weight: 100;
     }
@@ -296,14 +296,14 @@ h1{
         justify-content: center; /* Centerer billedet horisontalt */
         align-items: center; /* Centerer billedet vertikalt */
         margin: 14px;
-        margin-top: 10px;
+        margin-top: 24px;
         position: relative;
         overflow: hidden;
     }
     
     .category-box img {
        object-fit: cover;
-       width: 110%;
+       width: 100%;
        height: auto;
        transition: all 1s ease; /* Tilføjer en glidende overgang for filter-effekten */
     }
