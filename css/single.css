@@ -173,10 +173,14 @@ main {
     h2 {
       width: 30ch;
     }
+    p {
+      margin-right: 20px;
+    }
   }
+
   .grid_1-1 {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.3fr;
     border-bottom: none;
     img {
       border-right: 1px solid black;

@@ -101,30 +101,3 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     }
   });
 });
-
-{
-  /* <div class="rating2">
-            <div class="star">
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-            </div>
-            <p><strong>${data.reviewerName}</strong></p>
-            <em>${data.comment}</em>
-            <p><strong>${data.date}</strong></p>
-          </div>
-          <div class="rating3">
-            <div class="star">
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-            </div>
-            <p><strong>${data.reviewerName}</strong></p>
-            <em>${data.comment}</em>
-            <p><strong>${data.date}</strong></p>
-          </div> */
-}
