@@ -219,9 +219,9 @@ header {
   height: 90px;
   a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
     font-family: Fragment Mono;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 25px;
 
     padding-right: 70px;
@@ -231,13 +231,17 @@ header {
 
 .logo {
   margin-left: 7%;
-  margin-top: 15px;
+  margin-top: 20px;
+}
+
+.logo img{
+  width: 72%;
 }
 
 .button1 {
   /* display: grid;
   place-items: center; */
-  padding-top: 18px;
+  padding-top: 25px;
   border-left: 1px solid var(--grey);
   border-right: 1px solid var(--grey);
 }
@@ -245,14 +249,14 @@ header {
 .button {
   /* display: grid;
   place-items: center; */
-  padding-top: 18px;
+  padding-top: 25px;
   border-right: 1px solid var(--grey);
 }
 
 .button3 {
   /* display: grid;
   place-items: center; */
-  padding-top: 18px;
+  padding-top: 25px;
 }
 
 .button a:hover {
@@ -376,4 +380,5 @@ nav {
   nav.active .menu a {
     font-size: 24px;
   }
+
 }
