@@ -33,6 +33,9 @@ main {
   h2 {
     padding: 10px;
   }
+  h2 {
+    width: 18ch;
+  }
 }
 
 .grid_1-1-1 {
@@ -42,7 +45,7 @@ main {
 }
 
 .review {
-  background: var(--pink);
+  background: rgb(255, 243, 248, 0.9);
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -83,14 +86,12 @@ main {
   position: absolute;
   right: 3%;
   object-fit: cover;
-  width: 50px;
+  width: 40px;
   height: 40px;
-  top: 48%;
+  top: 44%;
   cursor: pointer;
-  background-size: contain;
-  background-color: rgba(0, 0, 0, 0.5);
+
   background-repeat: no-repeat;
-  border: 1px solid rgb(66, 39, 38);
 }
 
 .like_button:hover {
@@ -118,8 +119,11 @@ main {
 .cart_button {
   background-color: black;
   padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
   text-align: center;
-  margin: 20px;
+  margin: 10px;
+  margin-left: 38%;
   a {
     text-decoration: none;
     color: white;
@@ -129,7 +133,7 @@ main {
 /* accordion */
 .accordion {
   width: 300px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .accordion-header {
@@ -164,13 +168,24 @@ main {
   main {
     margin: 80px;
   }
+
+  .produkt_info {
+    h2 {
+      width: 30ch;
+    }
+  }
   .grid_1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     border-bottom: none;
     img {
       border-right: 1px solid black;
     }
+  }
+
+  .cart_button {
+    display: inline-block;
+    justify-content: center;
   }
 
   .indhold {
@@ -179,7 +194,7 @@ main {
 
   .like_button {
     position: absolute;
-    right: 2%;
+    right: 1%;
     object-fit: cover;
     width: 4%;
     top: 3%;

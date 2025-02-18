@@ -16,9 +16,9 @@ fetch(`https://dummyjson.com/products/${productId}`)
           <div>
             <img src="${data.images[0]}" alt="mascara" />
           </div>
-          <div class="indhold">
+        <div class="indhold">
           <div class="deal ${!data.discount && "skjul"}">
-          <p>DEAL</p>
+            <p>DEAL</p>
           </div>
             <div class="like_button"></div>
             <div class="produkt_info">
@@ -68,17 +68,11 @@ fetch(`https://dummyjson.com/products/${productId}`)
           .map((data) => {
             console.log("data er: ", data);
             return `
+            
           <div class="rating1">
-            <div class="star">
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-              <img src="./assets/star.svg" alt="star" />
-            </div>
-            <p><strong>${data.reviewerName}</strong></p>
+            <p><strong>Rating:</strong> ${data.rating}</p>
             <em>${data.comment}</em>
-            <p><strong>${data.date}</strong></p>
+            <p><strong>${data.reviewerName}</strong></p>
           </div>`;
           })
           .join("")}
