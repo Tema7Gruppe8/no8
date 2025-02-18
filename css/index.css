@@ -240,7 +240,7 @@ h1{
         width: 30%; 
         font-size: 19.5px;
         line-height: 35px;
-        padding: 25px;
+        padding: 35px;
         padding-left: 20px;
         padding-right: 59px;
         margin-left: 170px;
@@ -252,12 +252,12 @@ h1{
     }
 
     .hero-box{
-        width: 28.5%;
-        padding: 100px;
+        width: 30%;
+        padding: 110px;
         display: flex;
         position: relative;
-        bottom: 580px;
-        right: 385px;
+        bottom: 630px;
+        right: 400px;
         background-color: rgba(54, 26, 26, 0.088);
         
     }
