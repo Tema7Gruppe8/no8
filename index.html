@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Old Stand TT:--><link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
@@ -14,9 +15,34 @@
     <title>index</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <header>
+        <div class="logo">
+          <a href="index.html"><img src="./assets/logo.svg" alt="logo" /> </a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li class="button1">
+              <a href="list.html?category=beauty">Makeup</a>
+            </li>
+            <li class="button">
+              <a href="list.html?category=fragrances">Fragances</a>
+            </li>
+            <li class="button3">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="bottom_line"></div>
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </header>
+    </header>
     <main>
-      <h1>no. 08</h1>
+      <h1 class="logo-text">NO. 08</h1>
       <h2 class="bogf">Beauty & Fragrance"</h2>
       <section class="hero">
         <div class="image-container">
@@ -53,7 +79,29 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <footer class="site-footer">
+        <div class="footer-container">
+          <p class="footer-left">@stud.kea.dk</p>
+          <h3 class="footer-center">No.08</h3>
+          <p class="footer-right">Contact</p>
+        </div>
+  
+        <div class="footer-info">
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+              <img src="assets/fb_logo.svg" alt="Facebook Logo" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="assets/instagram_logo.svg" alt="Instagram Logo" />
+            </a>
+          </div>
+  
+          <p class="footer-text">CVR: 12345678 • Email: contact@no08.dk</p>
+        </div>
+      </footer>
+    </footer>
     <script src="js/index.js"></script>
+    <script src="js/base.js"></script>
   </body>
 </html>
