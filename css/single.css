@@ -11,7 +11,10 @@ img {
 }
 
 main {
-  margin: 40px;
+  max-width: 1000px;
+  margin-left: 40px;
+  margin-right: 40px;
+  place-self: center;
 }
 
 .grid_1-1 {
@@ -49,6 +52,7 @@ main {
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
+
   h3 {
     padding: 15px;
   }
@@ -132,8 +136,11 @@ main {
 
 /* accordion */
 .accordion {
-  width: 300px;
+  width: 400px;
   margin: 10px auto;
+  position: absolute;
+  background-color: white;
+  right: 8%;
 }
 
 .accordion-header {
@@ -150,12 +157,6 @@ main {
 
 .accordion-header:hover {
   background-color: rgb(214, 212, 212);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .accordion-content p {
@@ -190,7 +191,7 @@ main {
   .cart_button {
     display: inline-block;
     justify-content: center;
-    margin-left: 38%;
+    margin-left: 37%;
   }
 
   .indhold {

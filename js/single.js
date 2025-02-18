@@ -34,28 +34,34 @@ fetch(`https://dummyjson.com/products/${productId}`)
               <a href="">Add to cart</a>
             </div>
             <div class="accordion">
-              <button class="accordion-header">Details</button>
+            
+      <details>
+        <summary class="accordion-header">Details</summary>
+        <div class="accordion-content">
+          <p>Brand:${data.brand}</p>
+          <p>Sku: ${data.sku}</p>
+          <p>Weight: ${data.weight}</p>
+          <p>Dimensions: width: ${data.width}, height: ${data.height}, depth: ${data.depth}</p>
+        </div>
+      </details>
 
-              <div class="accordion-content">
-                <p>Brand:${data.brand}</p>
-                <p>Sku: ${data.sku}</p>
-                <p>Weight: ${data.weight}</p>
-                <p>Dimensions: width: ${data.width}, height: ${data.height}, depth: ${data.depth}</p>
-              </div>
+      <details>
+        <summary class="accordion-header">Stock</summary>
+        <div class="accordion-content">
+          <p>${data.availabilityStatus}: ${data.stock}</p>
+          
+        </div>
+      </details>
 
-              <button class="accordion-header">Stock</button>
-              <div class="accordion-content">
-                <p>${data.availabilityStatus}:</p>
-                <p>${data.stock}</p>
-              </div>
-
-              <button class="accordion-header">Shipping & Returns</button>
-              <div class="accordion-content">
-                <p>Shipping: ${data.shippingInformation}</p>
-                <p>Return:${data.returnPolicy} </p>
-                <p>Warranty: ${data.warrantyInformation}</p>
-              </div>
-            </div>
+      <details>
+        <summary class="accordion-header">Shipping & Returns</summary>
+        <div class="accordion-content">
+          <p>Shipping: ${data.shippingInformation}</p>
+          <p>Return:${data.returnPolicy}</p>
+          <p>Warranty: ${data.warrantyInformation}</p>
+        </div>
+      </details>
+    </div>
           </div>
         </div>
         <div class="review">
