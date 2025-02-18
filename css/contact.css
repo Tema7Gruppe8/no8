@@ -17,7 +17,6 @@ body {
 }
 .contact-title {
   font-size: 24px;
-  font-weight: bold;
   background-color: #422726;
   color: white;
   padding: 25px 70px;
@@ -25,7 +24,7 @@ body {
   width: fit-content;
   margin: 0 auto 40px;
   letter-spacing: 15px; /* Mindre spacing for bedre læsbarhed */
-  border-radius: 8px;
+  margin-bottom: 60px;
 }
 
 /* ✅ CONTACT CARDS (MOBILE-FIRST) */
@@ -34,6 +33,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .contact-card {
   position: relative;
@@ -84,6 +84,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   text-align: left; /* Juster teksten til venstre */
+  margin-bottom: 100px; /* Giver mere afstand til footeren */
 }
 
 /* 🔹 Newsletter label i venstre hjørne */
