@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productCategory = urlParams.get("category");
 
-const productList = document.querySelector("main");
+const productList = document.querySelector(".product_list");
 
 let url = `https://dummyjson.com/products`;
 
@@ -32,12 +32,13 @@ function show(products) {
       const soldOutLabel = product.stock === 0 ? `<p class="product_soldout">Sold Out</p>` : "";
       const priceDisplay = product.discountPercentage
         ? `<p class="product_price">
-            <span class="original_price" style="text-decoration: line-through; color: red;">$${product.price}</span> 
+            <span class="original_price">$${product.price}</span> 
             <span class="discounted_price">$${finalPrice}</span>
           </p>`
         : `<p class="product_price">$${product.price}</p>`;
 
-      return `<article>
+      return `
+      <article>
           ${discountLabel}
           ${soldOutLabel}
           <label>
@@ -47,7 +48,6 @@ function show(products) {
           <a href="single.html?id=${product.id}"><img src="${product.thumbnail}" alt="${product.title}" /></a>
           <h3 class="product_name">${product.title}</h3>
           <p class="product_brand">${product.brand}</p>
-          <p class="product_tags">${product.tags.join(", ")}</p>
           <br>
           ${priceDisplay}
         </article>`;
