@@ -85,7 +85,13 @@ Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
 
 - Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
+
+  - Vi har lavet funktion, såsom getData(), som fetcher API fra dummyJSON. fx showProducts() som viser indholdet i et innerHTML.
+
 - Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
+
+  -
+
 - Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
 - Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
 
