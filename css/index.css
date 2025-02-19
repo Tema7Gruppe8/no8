@@ -8,9 +8,12 @@ main{
     margin-top: 50px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
 /*Herosektionen */
-.hero {
+#hero {
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -111,7 +114,7 @@ h1{
     padding: 10px;
 }
 
-.category_container {
+#category_container {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 5px;
@@ -180,7 +183,7 @@ h1{
         width: 100%;
     }
 
-    .hero{
+    #hero{
         margin-bottom: -430px;
     }
 
@@ -274,7 +277,7 @@ h1{
 
     /* ____________category section______________ */
 
-    .category_container {
+    #category_container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         gap: 30px;
