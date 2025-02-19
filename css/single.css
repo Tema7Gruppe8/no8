@@ -11,9 +11,7 @@ img {
 }
 
 main {
-  max-width: 1000px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 40px;
   place-self: center;
 }
 
@@ -96,9 +94,8 @@ main {
   object-fit: cover;
   width: 40px;
   height: 40px;
-  top: 44%;
+  top: 43%;
   cursor: pointer;
-
   background-repeat: no-repeat;
 }
 
@@ -140,9 +137,8 @@ main {
 
 /* accordion */
 .accordion {
-  width: 400px;
+  width: 300px;
   margin: 10px auto;
-  position: absolute;
   background-color: white;
   right: 8%;
 }
@@ -171,7 +167,10 @@ main {
 
 @media (min-width: 800px) {
   main {
-    margin: 80px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .produkt_info {
@@ -181,6 +180,11 @@ main {
     p {
       margin-right: 20px;
     }
+  }
+
+  .accordion {
+    width: 400px;
+    position: absolute;
   }
 
   .grid_1-1 {
