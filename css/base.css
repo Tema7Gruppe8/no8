@@ -30,7 +30,6 @@ body {
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     */
 
-
 /* _________________________________________________________________________________________________________________________________________ */
 /* Footer html!
 <footer class="site-footer">
@@ -206,6 +205,7 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
+
   /* align-items: center; */
   /* border-bottom: 1px solid black; */
 }
@@ -234,7 +234,7 @@ header {
   margin-top: 20px;
 }
 
-.logo img{
+.logo img {
   width: 72%;
 }
 
@@ -380,9 +380,7 @@ nav {
   nav.active .menu a {
     font-size: 24px;
   }
-
 }
-
 
 /* __________________________________________________________________________________________________________________ */
 /* FAVICON LINK TIL HTML */
