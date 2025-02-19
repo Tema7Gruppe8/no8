@@ -11,7 +11,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
   .then((data) => {
     // Tager svaret og gør det til gyldig data.
     produkt.innerHTML = `
-
+    
     <div class="grid_1-1">
           <div>
             <img src="${data.images[0]}" alt="mascara" />
@@ -107,3 +107,7 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     }
   });
 });
+
+// <a href="">
+// <img src="../assets/arrow_left.svg" class="arrow_left" alt="arrow" />
+// </a>

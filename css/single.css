@@ -17,6 +17,10 @@ main {
   place-self: center;
 }
 
+.arrow_left {
+  width: 5%;
+}
+
 .grid_1-1 {
   position: relative;
   border: 1px solid black;
