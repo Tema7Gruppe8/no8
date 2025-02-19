@@ -281,9 +281,9 @@ h1{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         gap: 30px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 25px;
-        margin: 20px;
+       
     }
 
     .cat{
@@ -298,9 +298,9 @@ h1{
         display: flex;
         justify-content: center; /* Centerer billedet horisontalt */
         align-items: center; /* Centerer billedet vertikalt */
-        margin: 14px;
-        margin-top: 24px;
         position: relative;
+        margin: 14px;
+        top: 6px;
         overflow: hidden;
     }
     
