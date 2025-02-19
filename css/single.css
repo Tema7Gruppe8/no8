@@ -16,7 +16,8 @@ main {
 }
 
 .arrow_left {
-  width: 5%;
+  width: 12%;
+  margin: 10px;
 }
 
 .grid_1-1 {
@@ -171,6 +172,11 @@ main {
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  .arrow_left {
+    width: 5%;
+    margin: 10px;
   }
 
   .produkt_info {
