@@ -12,7 +12,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
     // Tager svaret og gør det til gyldig data.
     produkt.innerHTML = `
     <a href="list.html?category=fragrances&makeup&beauty">
-      <img src="./assets/arrow_left.svg" class="arrow_left" alt="arrow" />
+      <img src="../assets/arrow_left.svg" class="arrow_left" alt="arrow" />
     </a>
     <div class="grid_1-1">
           <div>
