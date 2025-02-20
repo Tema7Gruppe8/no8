@@ -11,7 +11,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
   .then((data) => {
     // Tager svaret og gør det til gyldig data.
     produkt.innerHTML = `
-    <a href="list.html?category=fragrances&makeup&beauty">
+    <a href="list.html?category=fragrances&category=makeup&category=beauty">
       <img src="/assets/arrow_left.svg" class="arrow_left" alt="arrow" />
     </a>
     <div class="grid_1-1">
