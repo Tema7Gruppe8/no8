@@ -31,7 +31,7 @@ main {
   place-content: center;
 }
 
-img {
+.product_list img {
   width: 250px;
   border-bottom: 1px solid black;
 }
