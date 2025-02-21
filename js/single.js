@@ -79,7 +79,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
             return `
             
           <div class="rating1">
-            <p><strong>Rating:</strong> ${data.rating}</p>
+            <p><strong>Rating:</strong> ${data.rating}/5</p>
             <em>${data.comment}</em>
             <p><strong>${data.reviewerName}</strong></p>
           </div>`;
